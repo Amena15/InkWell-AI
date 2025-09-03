@@ -40,21 +40,6 @@ Modern development teams face significant documentation challenges:
 - **Documentation Generation**: Creates clear, concise, and well-structured documentation
 - **Quality Assurance**: Identifies potential issues and suggests improvements
 
-## 🏆 Hackathon Ready
-
-This project is specifically designed to win hackathons with its:
-- **Rapid Setup**: Get started in minutes with our easy setup process
-- **Modern Tech Stack**: Built with the latest technologies for maximum performance
-- **Scalable Architecture**: Ready to handle projects of any size
-- **Beautiful UI**: Professional, responsive design that impresses judges
-
-## 🛠️ Technology Stack
-
-### Backend
-- **Framework**: FastAPI (Python)
-- **Database**: PostgreSQL with SQLAlchemy ORM
-- **AI/ML**: OpenAI GPT-4 for documentation generation
-- **Authentication**: JWT-based authentication
 - **API**: RESTful API design with OpenAPI documentation
 
 ### Frontend
@@ -147,32 +132,6 @@ This project is specifically designed to win hackathons with its:
    ```
 
    The application will be available at `http://localhost:3000`
-
-## 🌐 Deployment
-
-### Production Build
-
-```bash
-# Build frontend
-cd frontend
-pnpm build
-
-# Build backend
-cd ../backend
-pnpm build
-```
-
-### Deployment Options
-
-1. **Docker (Recommended)**
-   ```bash
-   docker-compose up --build
-   ```
-
-2. **Platform as a Service**
-   - Vercel (Frontend)
-   - Railway (Backend & Database)
-   - Supabase (Alternative to PostgreSQL)
 
 ## 🤝 Contributing
 
