@@ -61,77 +61,56 @@ Modern development teams face significant documentation challenges:
 - **Search**: Meilisearch
 - **AI/ML**: Integration with OpenAI's GPT models
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
+- Node.js 18+ & pnpm 8.x
+- Python 3.10+
+- SQLite (included with most systems)
 
-- Node.js 18+
-- PostgreSQL 14+
-- pnpm 8.x
-- Python 3.10+ (for ML components)
+### Setup (5 minutes)
 
-### Installation
-
-1. **Clone the repository**
+1. **Clone and install**
    ```bash
-   git clone https://github.com/your-org/inkwell-ai.git
-   cd inkwell-ai
-   ```
-
-2. **Install dependencies**
-   ```bash
-   # Install root dependencies
-   pnpm install
+   git clone https://github.com/Amena15/InkWell-AI.git
+   cd InkWell-AI
    
-   # Install frontend dependencies
-   cd frontend
-   pnpm install
+   # Install frontend deps
+   cd frontend && pnpm install
    
-   # Install backend dependencies
+   # Install backend deps
    cd ../backend
-   pnpm install
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
    ```
 
-3. **Set up environment variables**
-   Create `.env` files in both `frontend` and `backend` directories:
-   
+2. **Configure environment**
+   Create `.env` in the backend folder:
    ```env
-   # frontend/.env
-   NEXT_PUBLIC_API_URL=http://localhost:3001
-   NEXT_PUBLIC_APP_ENV=development
-   ```
-   
-   ```env
-   # backend/.env
-   DATABASE_URL="postgresql://user:password@localhost:5432/inkwell_ai"
-   NODE_ENV=development
-   PORT=3001
-   JWT_SECRET=your_jwt_secret_here
-   OPENAI_API_KEY=your_openai_api_key
+   DATABASE_URL=sqlite:///./inkwell.db
+   SECRET_KEY=your-secret-key-here
+   OPENAI_API_KEY=your-openai-api-key
    ```
 
-4. **Database Setup**
+3. **Run the application**
    ```bash
+   # Terminal 1: Backend
    cd backend
-   pnpm prisma migrate dev
-   pnpm prisma db seed
-   ```
-
-5. **Running the Application**
+   uvicorn app.main:app --reload
    
-   In separate terminal windows:
-   
-   ```bash
-   # Start backend
-   cd backend
-   pnpm dev
-   
-   # Start frontend
+   # Terminal 2: Frontend
    cd ../frontend
    pnpm dev
    ```
+   
+   - Frontend: http://localhost:3000
+   - API Docs: http://localhost:8000/docs
 
-   The application will be available at `http://localhost:3000`
+### First Time Setup
+1. Open the frontend in your browser
+2. Sign up for a new account
+3. Start documenting your code!
 
 ## 🤝 Contributing
 
